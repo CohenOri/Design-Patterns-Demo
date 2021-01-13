@@ -23,6 +23,7 @@ public class FancyRestaurantWorkersFactory implements AbstractWorkersFactory {
     }
 
     @Override
+    // reading configs should be done in more robust way, currently I skipped the exhausting parsing phase since its mainly demostration project
     public Waiter createWaiter(Integer id) {
         Map<WorkerCapabilities, Boolean> capabilities = new HashMap<>();
         capabilities.put(WorkerCapabilities.COOK, getCapabilityProp("WAITER-COOK"));
@@ -33,6 +34,7 @@ public class FancyRestaurantWorkersFactory implements AbstractWorkersFactory {
     }
 
     @Override
+    // reading configs should be done in more robust way, currently I skipped the exhausting parsing phase since its mainly demostration project
     public Cook createCook(Integer id) {
         Map<WorkerCapabilities, Boolean> capabilities = new HashMap<>();
         capabilities.put(WorkerCapabilities.COOK, getCapabilityProp("COOK-COOK"));
